@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+:root {
+  --app-dark-background-color: #121318;
+  --app-white-text-color: #f5f5f5;
+  --button-green: #04995b;
+  --button-hover-green: #048f55;
+  --input-bg-color: #222224;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--app-dark-background-color);
+  color: var(--app-white-text-color);
+}
+
+.container {
+  width: min(100% - 30px, 1200px);
+  margin-inline: auto;
+  text-align: center;
+}
+
+  
+.clock {
+  font-size: 150px;
+  font-weight: bold;
+}
+
+.alarm-set-indicator {
+  font-size: 20px;
+  color: var(--app-white-text-color);
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+.clock.active {
+  color: var(--button-green);
+}
+
+.hours, .minutes {
+  width: 80px;
+  padding: 8px;
+  margin-right: 6px;
+  font-size: 20px;
+  color: var(--app-white-text-color);
+  background-color: var(--input-bg-color);
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+  outline: none;
+}
+
+.set-alarm {
+  padding: 8px 30px;
+  font-size: 20px;
+  background-color: var(--button-green);
+  color: var(--app-white-text-color);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.set-alarm:hover {
+  background-color: var(--button-hover-green);
+}
